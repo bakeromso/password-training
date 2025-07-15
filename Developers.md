@@ -55,6 +55,11 @@ Unlock keychain in current session: `security -v unlock-keychain ~/Library/Keych
 When getting an `failed to resolve source metadata for docker.io/library/` error, Try the following fix (found [here](https://forums.docker.com/t/error-failed-to-solve-error-getting-credentials-err-exit-status-1-out/136124/6)). `sudo nano ~/.docker/config.json` and change `desktop` into `osxkeychain`. This may resolve the issue.
 
 
+### failed to resolve reference "ghcr.io/radicallyopensecurity/training-beef:latest": failed to authorize: failed to fetch oauth token: unexpected status from GET request 
+
+Possibly your ghcr.io token is expired. `docker logout ghcr.io` to be sure there's no faulty login causing this to fail.
+
+
 ## Extra information
 The following section contains additional information on working with the docker image. These steps are **NOT**  required for setting up the demo environment.
 
@@ -90,3 +95,4 @@ docker run -t -i my_container /bin/bash
 
 #### Note on exported containers
 Exporting and importing a docker container loses all of it's history in docker. If you want to retain you docker image layers use the `docker save` command instead.
+
