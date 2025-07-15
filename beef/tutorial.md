@@ -167,7 +167,10 @@ downloaded.
 visible. The more visual elements, the better...
 
 Just for fun, play a sound on the victim's computer. Search for _sound_ and
-execute the _Play Sound_ module.
+execute the _Play Sound_ module. In the field for _Sound File Path:_ enter:
+```
+http://localhost:8088/sound.mp3
+```
 
 Is the sound on? Then we can do better... Search for _raw_ and select the _Raw
 JavaScript_ module. Paste the following code in the JavaScript Code window:
